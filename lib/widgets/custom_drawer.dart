@@ -17,25 +17,45 @@ class CustomDrawer extends StatelessWidget {
             width: 256,
             child: Column(
               children: [
-                CustomMenu(
-                  menu: 'Beranda',
-                  withBorder: true,
-                  image: 'assets/images/home.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: CustomMenu(
+                    menu: 'Beranda',
+                    withBorder: true,
+                    image: 'assets/images/home.png',
+                  ),
                 ),
-                CustomMenu(
-                  menu: 'Tentang Produk',
-                  withBorder: true,
-                  image: 'assets/images/information-circle.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: CustomMenu(
+                    menu: 'Tentang Produk',
+                    withBorder: true,
+                    image: 'assets/images/information-circle.png',
+                  ),
                 ),
-                CustomMenu(
-                  menu: 'Lapor Kehilangan',
-                  withBorder: true,
-                  image: 'assets/images/exclamation-circle.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: CustomMenu(
+                    menu: 'Lapor Kehilangan',
+                    withBorder: true,
+                    image: 'assets/images/exclamation-circle.png',
+                  ),
                 ),
-                CustomMenu(
-                  menu: 'Panggil Petugas',
-                  withBorder: true,
-                  image: 'assets/images/status-online.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: CustomMenu(
+                    menu: 'Panggil Petugas',
+                    withBorder: true,
+                    image: 'assets/images/status-online.png',
+                  ),
                 ),
               ],
             ),
@@ -107,34 +127,36 @@ class CustomMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: withBorder
-          ? const BoxDecoration(
-              border: Border(
-                bottom: BorderSide(width: 1, color: Color(0xffE5E7EB)),
+    return GestureDetector(
+      child: Container(
+        decoration: withBorder
+            ? const BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(width: 1, color: Color(0xffE5E7EB)),
+                ),
+              )
+            : null,
+        height: 76,
+        width: 256,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text(
+              '$menu',
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
               ),
-            )
-          : null,
-      height: 76,
-      width: 256,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Text(
-            '$menu',
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
             ),
-          ),
-          const SizedBox(
-            width: 16,
-          ),
-          Image.asset('$image'),
-          const SizedBox(
-            width: 12,
-          ),
-        ],
+            const SizedBox(
+              width: 16,
+            ),
+            Image.asset('$image'),
+            const SizedBox(
+              width: 12,
+            ),
+          ],
+        ),
       ),
     );
   }

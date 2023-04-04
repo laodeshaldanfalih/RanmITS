@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ranmits/pages/home_page.dart';
 import 'package:ranmits/pages/login_page.dart';
 import 'package:ranmits/pages/register_page.dart';
+import 'package:ranmits/pages/verification_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: HomePage.routeName,
       routes: {
+        VerificationPage.routeName: (context) => const VerificationPage(),
         HomePage.routeName: (context) => const HomePage(),
         RegisterPage.routename: (context) => const RegisterPage(),
         LoginPage.routename: (context) => const LoginPage()

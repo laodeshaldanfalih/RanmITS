@@ -1,5 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:ranmits/pages/home_page.dart';
+import 'package:ranmits/pages/login_page.dart';
+import 'package:ranmits/pages/verification_page.dart';
 
 class RegisterPage extends StatelessWidget {
   static const routename = 'RegisterPagePage-page';
@@ -72,7 +74,7 @@ class RegisterPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.of(context).pushNamed(HomePage.routeName);
+                    Navigator.of(context).pushNamed(VerificationPage.routeName);
                   },
                   child: Container(
                     height: 44,
@@ -95,19 +97,24 @@ class RegisterPage extends StatelessWidget {
                 ),
                 RichText(
                   textAlign: TextAlign.center,
-                  text: const TextSpan(
+                  text: TextSpan(
                     children: <TextSpan>[
-                      TextSpan(
+                      const TextSpan(
                         text: 'Sudah punya akun ? ',
                       ),
                       TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Navigator.of(context)
+                                .pushNamed(LoginPage.routename);
+                          },
                         text: 'Login',
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Color(0xff1C64F2),
                         ),
                       ),
                     ],
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                       color: Color(0xff575757),
