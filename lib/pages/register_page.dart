@@ -62,7 +62,7 @@ class RegisterPage extends StatelessWidget {
                         formSubTitle: 'Masukkan nama anda ',
                       ),
                       Form(
-                        formTitle: 'Passwors',
+                        formTitle: 'Password',
                         formSubTitle: 'Buat password baru',
                       ),
                       Form(

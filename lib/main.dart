@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ranmits/pages/home_page.dart';
 import 'package:ranmits/pages/login_page.dart';
 import 'package:ranmits/pages/register_page.dart';
+import 'package:ranmits/pages/tentang_produk_page.dart';
 import 'package:ranmits/pages/verification_page.dart';
 
 void main() {
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
         VerificationPage.routeName: (context) => const VerificationPage(),
         HomePage.routeName: (context) => const HomePage(),
         RegisterPage.routename: (context) => const RegisterPage(),
-        LoginPage.routename: (context) => const LoginPage()
+        LoginPage.routename: (context) => const LoginPage(),
+        TentangProdukPage.routeName: (context) => const TentangProdukPage()
       },
     );
   }

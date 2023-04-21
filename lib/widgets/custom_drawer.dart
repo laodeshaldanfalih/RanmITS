@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ranmits/pages/home_page.dart';
 import 'package:ranmits/pages/login_page.dart';
 import 'package:ranmits/pages/register_page.dart';
+import 'package:ranmits/pages/tentang_produk_page.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -19,7 +21,8 @@ class CustomDrawer extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.of(context)
+                        .pushReplacementNamed(HomePage.routeName);
                   },
                   child: CustomMenu(
                     menu: 'Beranda',
@@ -29,7 +32,8 @@ class CustomDrawer extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.of(context)
+                        .pushReplacementNamed(TentangProdukPage.routeName);
                   },
                   child: CustomMenu(
                     menu: 'Tentang Produk',
