@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ranmits/pages/detail_laporan_page.dart';
+import 'package:ranmits/pages/laporan_kehilangan1_page.dart';
 import 'package:ranmits/widgets/alert_box.dart';
 import 'package:ranmits/widgets/custom_drawer.dart';
 import 'package:ranmits/widgets/daftar_laporan_kehilangan.dart';
@@ -129,12 +130,18 @@ class HomePage extends StatelessWidget {
                                     'assets/images/exclamation-circle-white.png',
                                     scale: 1,
                                   ),
-                                  const Text(
-                                    'Laporkan Kehilangan',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).pushNamed(
+                                          LaporanKehilangan1Page.routeName);
+                                    },
+                                    child: const Text(
+                                      'Laporkan Kehilangan',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w500),
+                                    ),
                                   )
                                 ],
                               ),
