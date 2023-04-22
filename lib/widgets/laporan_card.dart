@@ -29,7 +29,7 @@ class LaporanCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
             child: SizedBox(
-              width: 187,
+              width: double.infinity,
               height: 156,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,13 +43,14 @@ class LaporanCard extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 187,
+                    width: double.infinity,
                     height: 118,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          width: 181,
+                        SizedBox(
+                          width: double.infinity,
                           height: 34,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,13 +59,13 @@ class LaporanCard extends StatelessWidget {
                                 height: 16,
                                 width: 123,
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Image.asset(
                                       'assets/images/tag.png',
                                       scale: 2,
                                     ),
+                                    const SizedBox(width: 6),
                                     const Text(
                                       'Deskripsi Kendaraan',
                                       style: TextStyle(
@@ -87,25 +88,25 @@ class LaporanCard extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Container(
-                          width: 181,
+                        SizedBox(
+                          width: double.infinity,
                           height: 34,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(
                                 height: 16,
-                                width: 123,
+                                width: double.infinity,
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Image.asset(
-                                      'assets/images/tag.png',
+                                      'assets/images/clock.png',
                                       scale: 2,
                                     ),
+                                    const SizedBox(width: 6),
                                     const Text(
-                                      'Deskripsi Kendaraan',
+                                      'Waktu Kejadian',
                                       style: TextStyle(
                                         fontSize: 10,
                                         fontWeight: FontWeight.normal,
@@ -116,7 +117,7 @@ class LaporanCard extends StatelessWidget {
                                 ),
                               ),
                               const Text(
-                                'Honda Beat 115 | Warna Hitam | 2019',
+                                'Senin, 29 November 2022  |  03:15 WIB',
                                 style: TextStyle(
                                   fontSize: 10,
                                   fontWeight: FontWeight.w600,
@@ -126,8 +127,8 @@ class LaporanCard extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Container(
-                          width: 181,
+                        SizedBox(
+                          width: double.infinity,
                           height: 34,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,15 +137,15 @@ class LaporanCard extends StatelessWidget {
                                 height: 16,
                                 width: 123,
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Image.asset(
-                                      'assets/images/tag.png',
+                                      'assets/images/location-marker.png',
                                       scale: 2,
                                     ),
+                                    const SizedBox(width: 6),
                                     const Text(
-                                      'Deskripsi Kendaraan',
+                                      'Terakhir Dilihat',
                                       style: TextStyle(
                                         fontSize: 10,
                                         fontWeight: FontWeight.normal,
@@ -155,7 +156,7 @@ class LaporanCard extends StatelessWidget {
                                 ),
                               ),
                               const Text(
-                                'Honda Beat 115 | Warna Hitam | 2019',
+                                'Jl. Sepanjang Jalan Kenangan 123',
                                 style: TextStyle(
                                   fontSize: 10,
                                   fontWeight: FontWeight.w600,

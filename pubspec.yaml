@@ -75,6 +75,9 @@ flutter:
     - assets/images/information-circle.png
     - assets/images/exclamation-circle-white.png
     - assets/images/mail.png
+    - assets/images/clock.png
+    - assets/images/location-marker.png
+    - assets/images/pencil-alt.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

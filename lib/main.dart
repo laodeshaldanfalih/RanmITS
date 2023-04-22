@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ranmits/pages/detail_laporan_page.dart';
 import 'package:ranmits/pages/home_page.dart';
 import 'package:ranmits/pages/login_page.dart';
 import 'package:ranmits/pages/register_page.dart';
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         HomePage.routeName: (context) => const HomePage(),
         RegisterPage.routename: (context) => const RegisterPage(),
         LoginPage.routename: (context) => const LoginPage(),
-        TentangProdukPage.routeName: (context) => const TentangProdukPage()
+        TentangProdukPage.routeName: (context) => const TentangProdukPage(),
+        DetailLaporan.routeName: (context) => const DetailLaporan(),
       },
     );
   }

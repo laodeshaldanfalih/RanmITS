@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ranmits/pages/detail_laporan_page.dart';
 import 'package:ranmits/widgets/alert_box.dart';
 import 'package:ranmits/widgets/custom_drawer.dart';
 import 'package:ranmits/widgets/daftar_laporan_kehilangan.dart';
@@ -164,7 +165,13 @@ class HomePage extends StatelessWidget {
                       const SizedBox(height: 32),
                       const DaftarLaporanKehilangan(),
                       const SizedBox(height: 16),
-                      const LaporanCard(),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context)
+                              .pushNamed(DetailLaporan.routeName);
+                        },
+                        child: const LaporanCard(),
+                      ),
                     ],
                   ),
                 ),
