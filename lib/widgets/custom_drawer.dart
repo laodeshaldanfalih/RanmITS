@@ -8,7 +8,7 @@ class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 662,
       width: double.infinity,
       child: Column(
@@ -38,7 +38,7 @@ class CustomDrawer extends StatelessWidget {
                   child: CustomMenu(
                     menu: 'Tentang Produk',
                     withBorder: true,
-                    image: 'assets/images/information-circle.png',
+                    image: 'assets/images/information-circle-ori.png',
                   ),
                 ),
                 GestureDetector(

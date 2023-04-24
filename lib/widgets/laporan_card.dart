@@ -6,7 +6,7 @@ class LaporanCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 327,
+      // width: 350,
       height: 418,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -23,8 +23,16 @@ class LaporanCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            'assets/images/motor_beat.png',
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: SizedBox(
+              height: 170,
+              width: double.infinity,
+              child: Image.asset(
+                'assets/images/motor_beat.png',
+                fit: BoxFit.fill,
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),

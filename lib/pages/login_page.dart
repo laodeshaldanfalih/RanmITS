@@ -3,7 +3,9 @@ import 'package:ranmits/pages/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   static const routename = 'login-page';
-  const LoginPage({super.key});
+  LoginPage({super.key});
+  final alamatEmailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class LoginPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 60),
         child: SizedBox(
             height: 339,
-            width: 327,
+            // width: 327,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -50,14 +52,18 @@ class LoginPage extends StatelessWidget {
                   height: 146,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Form(
                         formTitle: 'Alamat Email',
                         formSubTitle: 'Masukkan alamat email',
+                        controller: alamatEmailController,
+                        obscureText: false,
                       ),
                       Form(
                         formTitle: 'Password',
                         formSubTitle: 'Masukkan alamat email',
+                        controller: passwordController,
+                        obscureText: true,
                       ),
                     ],
                   ),
@@ -112,9 +118,16 @@ class LoginPage extends StatelessWidget {
 }
 
 class Form extends StatelessWidget {
-  const Form({super.key, required this.formTitle, required this.formSubTitle});
+  const Form(
+      {super.key,
+      required this.formTitle,
+      required this.formSubTitle,
+      required this.obscureText,
+      required this.controller});
   final String formTitle;
   final String formSubTitle;
+  final bool obscureText;
+  final controller;
 
   @override
   Widget build(BuildContext context) {
@@ -131,33 +144,29 @@ class Form extends StatelessWidget {
                 fontSize: 14,
                 fontWeight: FontWeight.w500),
           ),
-          Stack(
-            alignment: Alignment.centerLeft,
-            children: [
-              Container(
-                height: 42,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color(
-                      0xffC9C9C9,
+          SizedBox(
+            height: 42,
+            child: TextField(
+              controller: controller,
+              obscureText: obscureText,
+              decoration: InputDecoration(
+                  contentPadding: const EdgeInsets.only(left: 12),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(
+                      color: Color(0xffC9C9C9),
                     ),
                   ),
-                  borderRadius: BorderRadius.circular(8),
-                ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(color: Color(0xff1C64F2)),
+                  ),
+                  hintText: formSubTitle),
+              style: const TextStyle(
+                fontSize: 12,
               ),
-              Positioned(
-                left: 12,
-                child: Text(
-                  formSubTitle,
-                  style: const TextStyle(
-                      color: Color(0xffAEAEAE),
-                      fontSize: 12,
-                      fontWeight: FontWeight.normal),
-                ),
-              )
-            ],
-          )
+            ),
+          ),
         ],
       ),
     );

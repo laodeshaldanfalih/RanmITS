@@ -18,14 +18,15 @@ class DataKejadian extends StatelessWidget {
         ],
       ),
       height: 185,
-      width: 327,
+      // width: 327,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-              width: 295,
+              // width: 295,
               height: 50,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -52,9 +53,8 @@ class DataKejadian extends StatelessWidget {
             ),
             SizedBox(
               height: 79,
-              width: 295,
+              // width: 295,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     height: 79,
@@ -96,6 +96,9 @@ class DataKejadian extends StatelessWidget {
                         ],
                       ),
                     ),
+                  ),
+                  const SizedBox(
+                    width: 24,
                   ),
                   Container(
                     height: 32,

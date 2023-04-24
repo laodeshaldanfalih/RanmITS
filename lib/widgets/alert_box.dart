@@ -7,7 +7,7 @@ class AlertBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 120,
-      width: 327,
+      // width: 327,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: const Color(0xffEBF5FF),
@@ -19,7 +19,7 @@ class AlertBox extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset('assets/images/speakerphone.png'),
             const SizedBox(

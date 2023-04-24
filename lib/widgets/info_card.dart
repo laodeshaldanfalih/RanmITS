@@ -6,7 +6,7 @@ class InfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 375,
+      // width: 375,
       height: 405,
       color: const Color(0xff374151),
       child: Padding(
@@ -31,8 +31,8 @@ class InfoCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  width: 142,
+                SizedBox(
+                  // width: 142,
                   height: 114,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,7 +65,7 @@ class InfoCard extends StatelessWidget {
             ),
             Container(
               height: 58,
-              width: 375,
+              // width: 375,
               color: const Color(0xff1F2937),
               child: const Center(
                 child: Text(

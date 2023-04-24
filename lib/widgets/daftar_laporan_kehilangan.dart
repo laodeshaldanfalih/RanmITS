@@ -16,7 +16,7 @@ class DaftarLaporanKehilangan extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        Container(
+        SizedBox(
           height: 30,
           width: 232,
           child: Row(

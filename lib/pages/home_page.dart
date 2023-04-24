@@ -70,13 +70,11 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 327,
                         height: 259,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             SizedBox(
-                              width: 327,
                               height: 175,
                               child: Column(
                                 mainAxisAlignment:

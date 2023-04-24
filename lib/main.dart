@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:ranmits/pages/detail_laporan_page.dart';
 import 'package:ranmits/pages/home_page.dart';
 import 'package:ranmits/pages/laporan_kehilangan1_page.dart';
@@ -11,6 +12,13 @@ import 'package:ranmits/pages/tentang_produk_page.dart';
 import 'package:ranmits/pages/verification_page.dart';
 
 void main() {
+  // runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  // Step 3
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]).then((value) => runApp(const MyApp()));
   runApp(const MyApp());
 }
 
@@ -28,8 +36,8 @@ class MyApp extends StatelessWidget {
       routes: {
         VerificationPage.routeName: (context) => const VerificationPage(),
         HomePage.routeName: (context) => const HomePage(),
-        RegisterPage.routename: (context) => const RegisterPage(),
-        LoginPage.routename: (context) => const LoginPage(),
+        RegisterPage.routename: (context) => RegisterPage(),
+        LoginPage.routename: (context) => LoginPage(),
         TentangProdukPage.routeName: (context) => const TentangProdukPage(),
         DetailLaporan.routeName: (context) => const DetailLaporan(),
         LaporanKehilangan1Page.routeName: (context) =>
